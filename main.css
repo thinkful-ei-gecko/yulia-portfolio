@@ -35,6 +35,14 @@
     text-align: center;
   }
 
+  h2 { 
+    position: relative; 
+  }
+  h2 > span { 
+    position: absolute; 
+    top: -150px;
+  }
+
   #nav-bar {
     display: -webkit-box;
     display: -ms-flexbox; 
