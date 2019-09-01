@@ -36,15 +36,19 @@
   }
 
   #nav-bar {
-      display: flex;
-      padding: 0;
-      justify-content: space-evenly;
-      font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    font-weight: 600;
   }
 
   #nav-bar > li > a {
     text-decoration: none;
-    color: #2E5660
+    color: #455559;
+    font-size: 120%;
   }
 
   li {
@@ -58,12 +62,18 @@
 
   #avatar {
     width: 33%;
-    height: 33%;
-    border-radius: 50%;
+    border-radius: 5%;
     margin-bottom: 10%;
   }
 
+  #skills-section {
+    clear: left;
+  }
+
   #skills {
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -89,12 +99,18 @@
   }
 
   .made-with {
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
   
   .links {
+    display: -webkit-box;
+    display: -ms-flexbox; 
+    display: -webkit-flex;
     display: flex;
     padding: 5px;
     justify-content: space-evenly;
@@ -143,15 +159,79 @@
       font-size: calc(16px + 6 * ((100vw - 320px) / 680));
     }
   }
+  @media only screen and (min-width:540px) {
+    header {
+      padding: 12% 5% 3% 5%;
+    }
+    #about {
+      margin: 0 5%;
+    }
+
+    .project-card {
+      margin: 5% 10%;
+    }
+  
+    .made-with > img {
+      width: 35px;
+      height: 35px;
+      padding: 1%;
+      margin: 1%;
+    }
+  } 
   @media only screen and (min-width:780px) {
+    #nav-bar {
+      display: -webkit-box;
+      display: -ms-flexbox; 
+      display: -webkit-flex;
+      display: flex;
+      padding: 0;
+      justify-content: flex-end;
+      font-weight: 600;
+    }
+
+    #nav-bar > li {
+      margin-right: 2%;
+    }
+
+    header {
+      padding: 10% 5% 3% 5%;
+    }
+
+    #about {
+      margin: 0 10% 3%;
+      padding: 0 3%;
+    }
+
     #avatar {
-        width: 10%;
-        float: left;
-        margin-right: 5px;
+      width: 20%;
+      border-radius: 5%;
+      float: left;
+      margin: 1% 4% 0 0;
+    }
+
+    #skills {
+      margin: 0 10%;
+    }
+
+    .project-card {
+      margin: 5% 15%;
+    }
+
+    .made-with > img {
+      width: 45px;
+      height: 45px;
+      padding: 1%;
+      margin: 1%;
     }
   } 
   @media screen and (min-width: 1000px) {
     html {
       font-size: 22px;
+    }
+    .made-with > img {
+      width: 55px;
+      height: 55px;
+      padding: 1%;
+      margin: 1%;
     }
   }
