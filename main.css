@@ -76,6 +76,11 @@
 
   #skills-section {
     clear: left;
+    margin-top: 5%;
+  }
+
+  #projects {
+    margin-top: 5%;
   }
 
   #skills {
@@ -159,6 +164,10 @@
     font-size: 120%;
     font-weight: 600;
     padding: 5%;
+  }
+
+  footer {
+    font-size: 12px;
   }
 
  
