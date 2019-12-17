@@ -3,111 +3,143 @@
 <head>
     <title>Portfolio-Yulia Khisamutdinova</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href=https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css>
     <link href="https://fonts.googleapis.com/css?family=Gentium+Basic&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="portfolio_assets/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <nav>
         <ul id="nav-bar">
-          <li><a href="#about-offset">About me</a></li>
-          <li><a href="#skills-offset">Skills</a></li>
-          <li><a href="#projects-offset">Projects</a></li>
-          <li><a href="#contact-offset">Contact</a></li>
+          <li><a href="#about" onclick="toggleMobileMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMobileMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMobileMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+          <i id="icon" class="fa fa-bars"></i>
+        </a>
+
     </nav>
     <main>
         <header>
-            <h1>Hi, my name's Yulia. I'm a full-stack developer in Los Angeles</h1>
+            <h1>Hi, my name's Yulia. I'm a full-stack developer in Los Angeles.</h1>
         </header>
 
-        <section id="about">
-            <h2><span id="about-offset"></span>About</h2>
-            <p><img src="portfolio_assets/avatar.jpg" alt="Yulia Khisamutdinova avatar" id="avatar">
-                I am a full-stack developer with experience in customer service. A few months ago I decided to dive right into a career change by 
-                building projects and learning cutting-edge technologies with Thinkful. I'm excited to enter into this industry with my
-                new skills and get to work right away. I spend my whole day experimenting with HTML, CSS, and JavaScript. As much as I enjoy 
-                programming I also enjoy hiking, playing beach volleyball, and watching comedy movies.
+        <section id="about-section">
+       
+            <h2><span id="about"></span>About</h2>
+            <div class="about-container">
+            <img src="portfolio_assets/avatar.jpg" alt="Yulia Khisamutdinova avatar" id="avatar">
+            <p>
+              Dedicated web developer with experience in customer service. Team player with an eye for detail. Experienced with 
+              JavaScript, React, and Node.js. Goal-oriented and driven.
             </p>
+          </div>
         </section>
 
         <section id="skills-section">
-            <h2><span id="skills-offset"></span>Skills</h2>
-            <ul id="skills">
+            <h2><span id="skills"></span>Skills</h2>
+            <div class="skills">
+              <ul class="skills-list">
                 <li>JavaScript</li>
                 <li>React</li>
-                <li>Node.js</li>
-                <li>jQuery</li>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>Git/GitHub</li>
-            </ul>
+                <li>jQuery</li>
+                <li>Jest, Enzyme</li>
+              </ul>
+          
+              <ul class="skills-list">
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>Express</li>
+                <li>REST API</li>
+                <li>Mocha</li>
+                <li>Supertest</li>
+              </ul>
+            </div>
         </section>
-        <section id="projects">
-            <h2><span id="projects-offset"></span>Projects</h2>
+        <section id="projects-section">
+            <h2><span id="projects"></span>Projects</h2>
+            <section class="project-card">
+                <h3>Chorerunner </h3>
+                <p>
+                  Make a game out of household chores
+                </p>
+                <img src="portfolio_assets/chorerunner.png" alt="Quiz app screenshot displaying first question">
+                <div class="links">
+                    <a href="https://chorerunner-client.now.sh/" target="_blank">Live app</a>
+                    <a href="https://github.com/thinkful-ei-gecko/ChoreRunner-Client" target="_blank">GitHub</a>
+                </div>
+                <ul class="made-with">
+                  <li>React</li>
+                  <li>Node.js</li>
+                  <li>PostgreSQL</li>
+                  <li>Express</li>
+                    <!-- <img src="portfolio_assets/HTML5_Logo_512.png" alt="html5 logo">
+                    <img src="portfolio_assets/JavaScript-logo.png" alt="javascript logo">
+                    <img src="portfolio_assets/react.png" alt="react logo">
+                    <img src="portfolio_assets/css-3-logo-png-transparent.png" alt="css logo"> -->
+                    </ul>
+            </section>
+           
+            <section class="project-card">
+                <h3>Ricorda - Spaced Repetition</h3>
+                <p>
+                  Learn Italian using spaced repetition technique.
+                </p>
+                <img src="portfolio_assets/ricorda.png" alt="Ricorda app dashboard page">
+                <div class="links">
+                    <a href="https://ricorda.now.sh" target="_blank">Live app</a>
+                    <a href="https://github.com/thinkful-ei-gecko/Yulia-JamesL-Spaced-Repetition-Client" target="_blank">GitHub</a>
+                </div>
+                <ul class="made-with">
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Express</li>
+                </ul>
+            </section>
             <section class="project-card">
                 <h3>Origin - family tree builder</h3>
                 <p>
-                    Origin helps you to keep track of your family history.
+                  Keep track of your family history.
                 </p>
                 <img src="portfolio_assets/origin.png" alt="Home page of the Origin app that displays family tree">
                 <div class="links">
                     <a href="https://origin-app.now.sh" target="_blank">Live app</a>
                     <a href="https://github.com/yulia-kh/origin" target="_blank">GitHub</a>
                 </div>
-                <div class="made-with">
-                    <img src="portfolio_assets/node.png" alt="html5 logo">
-                    <img src="portfolio_assets/JavaScript-logo.png" alt="javascript logo">
-                    <img src="portfolio_assets/react.png" alt="jquery logo">
-                    <img src="portfolio_assets/css-3-logo-png-transparent.png" alt="css logo">
-                </div>
+                <ul class="made-with">
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Express</li>
+                </ul>
             </section>
-            <section class="project-card">
-                <h3>Harry Potter Trivia Quiz</h3>
-                <p>
-                    Harry Potter Trivia Quiz is an app that allows you to go through a series of questions and answers about world of Harry Potter.
-                </p>
-                <img src="portfolio_assets/quiz.jpg" alt="Quiz app screenshot displaying first question">
-                <div class="links">
-                    <a href="https://thinkful-ei-gecko.github.io/yulia-quasar-quiz-app/" target="_blank">Live app</a>
-                    <a href="https://github.com/thinkful-ei-gecko/yulia-quasar-quiz-app" target="_blank">GitHub</a>
-                </div>
-                <div class="made-with">
-                    <img src="portfolio_assets/HTML5_Logo_512.png" alt="html5 logo">
-                    <img src="portfolio_assets/JavaScript-logo.png" alt="javascript logo">
-                    <img src="portfolio_assets/jquery-logo-png--800.gif" alt="jquery logo">
-                    <img src="portfolio_assets/css-3-logo-png-transparent.png" alt="css logo">
-                </div>
-            </section>
+            
         </section>   
-                <section class="project-card">
-                    <h3>Bookmark App</h3>
-                    <p>
-                        Application that allows you to keep links to your favorite websites in organized manner.
-                    </p>
-                    <img src="portfolio_assets/bookmarks-app.png" alt="Bookmark application load page">
-                    <div class="links">
-                        <a href="https://thinkful-ei-gecko.github.io/yulia-bookmarks-app/" target="_blank">Live app</a>
-                        <a href="https://github.com/thinkful-ei-gecko/yulia-bookmarks-app" target="_blank">GitHub</a>
-                    </div>
-                    <div class="made-with">
-                            <img src="portfolio_assets/HTML5_Logo_512.png" alt="html5 logo">
-                            <img src="portfolio_assets/JavaScript-logo.png" alt="javascript logo">
-                            <img src="portfolio_assets/jquery-logo-png--800.gif" alt="jquery logo">
-                            <img src="portfolio_assets/css-3-logo-png-transparent.png" alt="css logo">
-                        </div>
-                </section>
+                
         
-        <section id="contact">
-            <h2><span id="contact-offset"></span>Contact</h2>
+        <section id="contact-section">
+            <h2><span id="contact"></span>Contact</h2>
             <a href="mailto:y.khisamutdinova@gmail.com" target="_blank">Email</a>
-            <a href="https://www.linkedin.com/in/yulia-khisamutdinova-500870ba/" target="_blank">Linkedin</a>
+            <a href="https://www.linkedin.com/in/yulia-khisamutdinova/" target="_blank">Linkedin</a>
             <a href="https://github.com/yulia-kh" target="_blank">GitHub</a>
         </section>
     </main>
     <footer>Copyright 2019</footer>
+    <script>
+      function toggleMobileMenu() {
+        let menu = document.getElementById("nav-bar");
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
+        }
+      }
+    </script>
 </body>
 </html>
